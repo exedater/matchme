@@ -5,6 +5,7 @@ from itertools import cycle
 import random
 import asyncio
 import yaml
+import os
 
 intents = discord.Intents.default()
 intents.members = True
@@ -105,4 +106,4 @@ async def presencenummatched():
             memberlist.append(member)
     await bot.change_presence(activity=discord.Game(name="with {memberlist} matched users!".format(memberlist=len(memberlist))))
 
-bot.run(config["bottoken"], bot=True, reconnect=True)
+bot.run(os.environ['BOT_TOKEN'], bot=True, reconnect=True)
