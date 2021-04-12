@@ -82,21 +82,6 @@ async def matchme():
     else:
         await bot.get_channel(config["serverlogid"]).send("Match Cannot be Made")
 
-@tasks.loop(seconds=240)
-async def conversationstarter():
-    channellist = []
-    for discord.TextChannel in bot.get_guild(config["serverid"]).text_channels:
-        if discord.TextChannel.name == "matched-with-user":
-            channellist.append(discord.TextChannel)
-    if not channellist:
-        await bot.get_channel(config["serverlogid"]).send("Unable to create conversation")
-    else:
-        conversationchannel = random.choice(channellist)
-        lines = open('settings/conversationstarters.txt').read().splitlines()
-        myline = random.choice(lines)
-        str(myline)
-        await conversationchannel.send(myline)
-
 @tasks.loop(seconds=5)
 async def presencenummatched():
     memberlist = []
