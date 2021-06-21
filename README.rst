@@ -6,6 +6,3 @@ A little bit of history on this bot. I originally worked on this bot in december
 
 I personally made a lot of friends through discord/lfg, and I hope to make this something special and unique allowing for people to make friends and meet people.
 
-I'm looking for anyone to help with code, and testers. Thank you very much for reading. Below is a link to an example of the bot. The second link is a server for testing.
-https://discord.gg/w3HbY8Xpmf
-https://discord.gg/fcbuspUt6r
